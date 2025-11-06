@@ -1,0 +1,18 @@
+#!/bin/bash
+
+SOURCE_DIR="/data8/OEP00000860"
+DEST_URL="https://emresearch.blob.core.windows.net/samples/OEP00000860"
+
+# for i in {70207..70241}; do
+#   FOLDER="OER000$i"
+#   echo "Syncing $FOLDER..."
+#   azcopy sync "$SOURCE_DIR/$FOLDER" "$DEST_URL/$FOLDER" --recursive --compare-hash=MD5 --delete-destination=false
+# done
+
+# 70242 i still missing!!!
+
+for i in {70242..70285}; do
+  FOLDER="OER000$i"
+  echo "Syncing $FOLDER..."
+  azcopy sync "$SOURCE_DIR/$FOLDER" "$DEST_URL/$FOLDER" --recursive --compare-hash=MD5 --delete-destination=false
+done

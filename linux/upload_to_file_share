@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Check if required arguments are provided
+if [ $# -lt 2 ]; then
+    echo "Usage: $0 <SOURCE_DIR> <DEST_DIR>"
+    echo "Example: $0 /data8/OEP00000860 OEP00000860"
+    exit 1
+fi
+
+SOURCE_DIR=$1
+DEST_DIR=$2
+token=$3
+
+
+# Construct destination URL
+DEST_URL="https://qnapdiag.file.core.windows.net/qnap1/$DEST_DIR?${token}"
+
+echo "Syncing $SOURCE_DIR to Azure File Share..."
+echo "Destination: $DEST_URL"
+
+# Run azcopy sync
+azcopy sync "$SOURCE_DIR" "$DEST_URL" --recursive=true --compare-hash=MD5 --delete-destination=false --put-md5=true
+
+# Check if azcopy succeeded
+if [ $? -eq 0 ]; then
+    echo "Sync completed successfully"
+else
+    echo "Error: Sync failed"
+    exit 1
+fi
