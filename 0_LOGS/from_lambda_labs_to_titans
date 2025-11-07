@@ -1,7 +1,26 @@
 
 ## FROM TITAN2
+rsync -avz --progress --include '*/' --exclude='*.bai' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/humans/psomagen/AN00026368/data/ /backup1/samples/humans/psomagen/AN00026368/data/
 rsync -avz --progress --include '*/' --exclude='*.bai' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/humans/psomagen/AN00026418/data/ /backup1/samples/humans/psomagen/AN00026418/data/
+rsync -avz --progress --include '*/' --exclude='*.bai' --exclude='*.bam' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/humans/psomagen/AN00026454/data/ /backup1/samples/humans/psomagen/AN00026454/data/
+rsync -avz --progress --include '*/' --exclude='*.bai' --exclude='*.bam' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/humans/psomagen/AN00025862/data/samples/ /backup1/samples/humans/psomagen/AN00025862/data/samples_info/
+rsync -avz --progress --include '*/' --exclude='*.bai' --exclude='*.bam' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/humans/psomagen/AN00026500/data/ /backup1/samples/humans/psomagen/AN00026500/data/
 
+AN00026368
+AN00026418
+AN00026454
+AN00025862
+AN00026500
+
+
+rsync -avz --progress --include '*/' --exclude='*.bai' --exclude='*.bam' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/hardik/data/ /backup1/samples/hardik/data/
+hardik
 
 # IN PROCESS...
-rsync -avz --progress --include '*/' --exclude='*.bai' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/humans/psomagen/AN00026368/data/ /backup1/samples/humans/psomagen/AN00026368/data/
+rsync -avz --progress --include '*/' --exclude='*.bai' --exclude='*.bam' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/humans/psomagen/AN00025834/data/ /backup1/samples/humans/psomagen/AN00025834/data/
+AN00025834
+
+rsync -avz --progress --include '*/' --include='*.bai' --include='*.bam' --exclude='*' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/hardik/data/ /backup1/samples/hardik/data/
+rsync -avz --progress --include '*/' ubuntu@192.222.57.211:/home/ubuntu/Work/samples/hardik/fastq/ /backup1/samples/hardik/fastq/
+
+# TODO

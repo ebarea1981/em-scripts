@@ -2,14 +2,26 @@ aztoken=$(az storage share generate-sas --account-name qnapdiag --name qnap1 --p
 
 
 ######################################### FROM ea5 #########################################
+AN00025834
+AN00025862
+
 azcopy sync "/home/ubuntu/Work/samples/humans/psomagen/AN00025834/fastq" "https://qnapdiag.file.core.windows.net/qnap1/samples/humans/psomagen/AN00025834/fastq?${aztoken}" --recursive=true --compare-hash=MD5 --delete-destination=false --put-md5=true
 azcopy sync "/home/ubuntu/Work/samples/humans/psomagen/AN00025862/fastq" "https://qnapdiag.file.core.windows.net/qnap1/samples/humans/psomagen/AN00025862/fastq?${aztoken}" --recursive=true --compare-hash=MD5 --delete-destination=false --put-md5=true
 
 # IN PROCESS...
+AN00026368
 azcopy sync "/home/ubuntu/Work/samples/humans/psomagen/AN00026368/fastq" "https://qnapdiag.file.core.windows.net/qnap1/samples/humans/psomagen/AN00026368/fastq?${aztoken}" --recursive=true --compare-hash=MD5 --delete-destination=false --put-md5=true
 
 ######################################### FROM ea6 #########################################
+AN00025834
 azcopy sync "/home/ubuntu/Work/samples/humans/psomagen/AN00025834/buffy-coat/fastq" "https://qnapdiag.file.core.windows.net/qnap1/samples/humans/psomagen/AN00025834/fastq?${aztoken}" --recursive=true --compare-hash=MD5 --delete-destination=false --put-md5=true
 
 # IN PROCESS...
+AN00026418
 azcopy sync "/home/ubuntu/Work/samples/humans/psomagen/AN00026418/fastq" "https://qnapdiag.file.core.windows.net/qnap1/samples/humans/psomagen/AN00026418/fastq?${aztoken}" --recursive=true --compare-hash=MD5 --delete-destination=false --put-md5=true
+
+
+
+######### TODO #########
+AN00026454
+AN00026500
